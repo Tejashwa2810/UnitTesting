@@ -74,4 +74,8 @@ public class BookService {
         Books myBook = deleteBook.get();
         bookRepository.delete(myBook);
     }
+
+    public int addTwoNumbers(int a, int b){
+        return a+b;
+    }
 }

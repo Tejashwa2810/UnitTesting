@@ -63,4 +63,9 @@ public class BookController {
         bookService.deleteBook(id);
         return ResponseEntity.ok("Book deleted successfully with id: " + id);
     }
+
+    @GetMapping("/addnum")
+    public int addTwoNumbers(int a, int b){
+        return bookService.addTwoNumbers(a,b);
+    }
 }

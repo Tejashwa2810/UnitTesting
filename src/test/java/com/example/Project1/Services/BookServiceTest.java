@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -27,7 +28,9 @@ public class BookServiceTest {
 //
 //        Assert.assertEquals(result, expected);
 
-        when(bookService.addTwoNumbers(2,4)).thenReturn(6);
+//        when(bookService.addTwoNumbers(2,4)).thenReturn(6);
+
+        when(bookService.addTwoNumbers(anyInt(), anyInt())).thenReturn(6);
 
         int result = 6;
 
